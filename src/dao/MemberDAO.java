@@ -2,8 +2,7 @@ package dao;
 import db.DBConnection;
 import model.Member;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class MemberDAO {
     public void addMember(Member member) throws SQLException{
@@ -39,6 +38,7 @@ public class MemberDAO {
             }
         }
     }
+    //member deletion query
     public void deleteMember(int memberId) throws  SQLException{
         String sql = "DELETE FROM member where id = ?";
         try(Connection con = DBConnection.getConnection();
