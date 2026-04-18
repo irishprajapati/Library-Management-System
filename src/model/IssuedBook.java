@@ -1,14 +1,14 @@
 package model;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class IssuedBook {
     private int id;
     private int bookId;
     private int memberId;
-    private LocalDate issueDate;
-    private LocalDate returnDate;
+    private LocalDateTime issueDate;
+    private LocalDateTime returnDate;
 
-    public IssuedBook(int id, int bookId, int memberId, LocalDate issueDate, LocalDate returnDate) {
+    public IssuedBook(int id, int bookId, int memberId, LocalDateTime issueDate, LocalDateTime returnDate) {
         this.id = id;
         this.bookId = bookId;
         this.memberId = memberId;
@@ -28,11 +28,11 @@ public class IssuedBook {
         return memberId;
     }
 
-    public LocalDate getIssueDate() {
+    public LocalDateTime getIssueDate() {
         return issueDate;
     }
 
-    public LocalDate getReturnDate() {
+    public LocalDateTime getReturnDate() {
         return returnDate;
     }
 }
